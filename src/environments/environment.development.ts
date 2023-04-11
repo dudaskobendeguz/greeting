@@ -1,1 +1,4 @@
-export const environment = {};
+export const environment = {
+  friendName: "Benedek",
+  defaultFriendName: "Beni"
+};
