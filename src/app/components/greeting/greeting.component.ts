@@ -19,7 +19,7 @@ export class GreetingComponent implements OnInit{
   ngOnInit(): void {
     this.route.queryParamMap.subscribe(q => {
       const queryParamName: string = q.get('name') != null ? q.get('name')! : '';
-      this.username = [this.friendName, this.defaultName].includes(queryParamName) ? queryParamName : this.defaultName;
+      this.username = [this.friendName.toLowerCase(), this.defaultName.toLowerCase()].includes(queryParamName.toLowerCase()) ? queryParamName : this.defaultName;
       if (this.username == this.defaultName) {
         this.isRickRolled = true;
       }

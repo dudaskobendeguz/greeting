@@ -6,6 +6,7 @@ import {GreetingComponent} from "./components/greeting/greeting.component";
 const routes: Routes = [
   { path: '', component: MainPageComponent },
   { path: 'greeting', component: GreetingComponent },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

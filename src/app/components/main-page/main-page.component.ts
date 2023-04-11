@@ -19,7 +19,7 @@ export class MainPageComponent {
 
   SendMyName() {
     let userName: string | null = this.userNameFormControl.getRawValue();
-    if(userName != this.friendName) {
+    if(userName?.toLowerCase() != this.friendName.toLowerCase()) {
       userName = this.defaultName
     }
     this.router.navigate(["/greeting"], {queryParams: {name: userName}})
