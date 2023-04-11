@@ -1,0 +1,18 @@
+
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.name {
+  font-size: 10vw;
+  position: center;
+
+}
+.rick-rolled {
+  width: 70vw;
+  height: 60vh;
+}

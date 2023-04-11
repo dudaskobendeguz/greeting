@@ -1,0 +1,14 @@
+<div class="content">
+  <h1 class="name">Hello {{ username }}!</h1>
+  <ng-container *ngIf="isRickRolled">
+    <iframe
+      class="rick-rolled"
+      width="640"
+      height="480"
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </ng-container>
+</div>
