@@ -11,6 +11,7 @@ import {environment} from "../../../environments/environment";
 export class MainPageComponent {
   private friendName: string = environment.friendName;
   private defaultName: string = environment.defaultFriendName;
+  private kindFriendName: string = environment.kindFriendName;
   userNameFormControl = new FormControl('', Validators.required);
 
   constructor(private router: Router ) {
@@ -19,7 +20,8 @@ export class MainPageComponent {
 
   SendMyName() {
     let userName: string | null = this.userNameFormControl.getRawValue();
-    if(userName?.toLowerCase() != this.friendName.toLowerCase()) {
+    if(userName?.toLowerCase() != this.friendName.toLowerCase() &&
+      userName?.toLowerCase() != this.kindFriendName.toLowerCase()) {
       userName = this.defaultName
     }
     this.router.navigate(["/greeting"], {queryParams: {name: userName}})

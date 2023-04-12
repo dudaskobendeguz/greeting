@@ -1,6 +1,14 @@
 <div class="content">
   <h1 class="name">Hello {{ username }}!</h1>
-  <ng-container *ngIf="isRickRolled">
+  <ng-container *ngIf="isFriendKind">
+    <mat-card>
+      <mat-card-content class="kind-card">
+        <h1>You are very <b class="kind-word">kind</b></h1>
+        <mat-icon class="kind-icon">handshake</mat-icon>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+  <ng-container *ngIf="!isFriendKind && isRickRolled">
     <iframe
       class="rick-rolled"
       width="640"
